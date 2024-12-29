@@ -1,0 +1,73 @@
+#include <iostream>
+#include <vector>
+#include <queue>
+using namespace std;
+
+typedef pair<int, vector<int>> HeapNode; // (current sum, indices of elements in each row)
+
+int kthSmallestSum(vector<vector<int>>& matrix, int k) {
+    int m = matrix.size(); // Number of rows
+    int n = matrix[0].size(); // Number of columns
+
+    // Min-heap to store (current sum, indices of elements in each row)
+    priority_queue<HeapNode, vector<HeapNode>, greater<>> minHeap;
+
+    // Initialize heap with the smallest sum (first elements of each row)
+    int initialSum = 0;
+    vector<int> initialIndices(m, 0); // Start with the first element of each row
+    for (int i = 0; i < m; ++i) {
+        initialSum += matrix[i][0];
+    }
+    minHeap.push({initialSum, initialIndices});
+
+    // Set to track visited combinations to avoid duplicates
+    set<vector<int>> visited;
+    visited.insert(initialIndices);
+
+    // Extract k times to get the k-th smallest sum
+    for (int count = 1; count < k; ++count) {
+        auto [currentSum, indices] = minHeap.top();
+        minHeap.pop();
+
+        // Generate new sums by moving one index forward in each row
+        for (int i = 0; i < m; ++i) {
+            if (indices[i] + 1 < n) { // Check if we can move to the next column in row i
+                vector<int> newIndices = indices;
+                newIndices[i]++; // Move one step in row i
+
+                if (visited.find(newIndices) == visited.end()) {
+                    int newSum = currentSum - matrix[i][indices[i]] + matrix[i][newIndices[i]];
+                    minHeap.push({newSum, newIndices});
+                    visited.insert(newIndices); // Mark this combination as visited
+                }
+            }
+        }
+    }
+
+    // The top element is the k-th smallest sum
+    return minHeap.top().first;
+}
+
+int main() {
+    vector<vector<int>> matrix = {
+        {1, 3, 11},
+        {2, 4, 6},
+        {5, 8, 9}
+    };
+    int k = 5;
+
+    cout << "The " << k << "-th smallest sum is: " << kthSmallestSum(matrix, k) << endl;
+
+    return 0;
+}
+
+Input:
+matrix = [
+  [1, 3, 11],
+  [2, 4, 6],
+  [5, 8, 9]
+]
+k = 5
+
+Output:
+The 5-th smallest sum is: 15
