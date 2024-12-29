@@ -1,0 +1,49 @@
+#include <iostream>
+#include <stack>
+using namespace std;
+
+bool isValid(string s) {
+    stack<char> st;
+
+    for (char c : s) {
+        if (c == '(' || c == '{' || c == '[') {
+            // Push opening brackets onto the stack
+            st.push(c);
+        } else {
+            // For closing brackets, check for matching opening brackets
+            if (st.empty()) {
+                return false; // No matching opening bracket
+            }
+            char top = st.top();
+            if ((c == ')' && top == '(') ||
+                (c == '}' && top == '{') ||
+                (c == ']' && top == '[')) {
+                st.pop(); // Matching pair found, pop the stack
+            } else {
+                return false; // Mismatched pair
+            }
+        }
+    }
+
+    // If the stack is empty, all brackets are matched
+    return st.empty();
+}
+
+int main() {
+    string s = "{[()]}"; // Example input
+
+    if (isValid(s)) {
+        cout << "The string has valid parentheses." << endl;
+    } else {
+        cout << "The string does not have valid parentheses." << endl;
+    }
+
+    return 0;
+}
+
+Input:
+s = "{[()]}"
+
+Ouput:
+The string has valid parentheses.
+
