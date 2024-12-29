@@ -1,0 +1,53 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <climits>
+using namespace std;
+
+pair<int, int> closestToZero(vector<int>& arr) {
+    sort(arr.begin(), arr.end()); // Step 1: Sort the array
+
+    int left = 0, right = arr.size() - 1;
+    int closestSum = INT_MAX;
+    pair<int, int> result;
+
+    while (left < right) {
+        int sum = arr[left] + arr[right];
+
+        // Update closest sum and result pair
+        if (abs(sum) < abs(closestSum)) {
+            closestSum = sum;
+            result = {arr[left], arr[right]};
+        }
+
+        // If two sums are equally close to 0, prefer the positive sum
+        if (abs(sum) == abs(closestSum) && sum > closestSum) {
+            result = {arr[left], arr[right]};
+        }
+
+        // Move pointers based on the sum
+        if (sum < 0) {
+            left++; // Increase the sum
+        } else {
+            right--; // Decrease the sum
+        }
+    }
+
+    return result;
+}
+
+int main() {
+    vector<int> arr = {-8, -66, -60, 10, 50, 14, -3};
+
+    pair<int, int> result = closestToZero(arr);
+
+    cout << "Pair closest to zero: (" << result.first << ", " << result.second << ")" << endl;
+
+    return 0;
+}
+
+Input:
+arr = {-8, -66, -60, 10, 50, 14, -3}
+
+Output:
+Pair closest to zero: (-8, 10)
