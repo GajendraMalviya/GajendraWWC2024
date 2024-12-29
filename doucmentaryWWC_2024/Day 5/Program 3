@@ -1,0 +1,47 @@
+#include <iostream>
+#include <vector>
+#include <algorithm> // For std::sort
+using namespace std;
+
+vector<int> targetIndices(vector<int>& nums, int target) {
+    // Step 1: Sort the array
+    sort(nums.begin(), nums.end());
+
+    // Step 2: Collect indices of target values
+    vector<int> result;
+    for (int i = 0; i < nums.size(); i++) {
+        if (nums[i] == target) {
+            result.push_back(i);
+        }
+    }
+
+    return result;
+}
+
+int main() {
+    vector<int> nums = {1, 2, 5, 2, 3};
+    int target = 2;
+
+    vector<int> indices = targetIndices(nums, target);
+
+    // Output the result
+    if (!indices.empty()) {
+        cout << "Target indices: ";
+        for (int index : indices) {
+            cout << index << " ";
+        }
+        cout << endl;
+    } else {
+        cout << "Target not found in the array." << endl;
+    }
+
+    return 0;
+}
+
+Input :
+nums = [1, 2, 5, 2, 3]
+target = 2
+
+Output:
+Target indices: 1 2
+
