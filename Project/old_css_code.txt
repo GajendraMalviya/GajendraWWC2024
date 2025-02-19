@@ -1,0 +1,334 @@
+.mainbody
+{
+    background-color: rgb(252, 231, 238);
+    padding-top: 100px;
+}
+.header
+{
+    display : flex;
+    flex : 1 1 1;
+    justify-items : center;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 5px;
+    background-color: black;  /* rgb(249, 202, 209); --> by default old colour */
+    border-radius: 20px;
+     /* margin: 20px 20px; */
+    /* new lines below this */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.travel-planning
+{
+    flex : 1;
+    position: relative;
+    display: inline-block;
+}
+/* adding tool tip to image */
+.travel-planner::before {
+    content: attr(title);
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.05s ease-in-out;
+  }
+  
+  .travel-planner:hover::before {
+    opacity: 1;
+  }
+.none
+{
+    flex : 1;
+}
+.main-logo
+{
+    flex : 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.travel-planner
+{
+    flex : 1;
+    margin-left: 50px;
+    height: 70px;
+    border-radius: 35px;
+    cursor : pointer ;
+    background-color: rgb(199, 198, 198);
+}
+.logo
+{
+    cursor : pointer;
+    height : 125px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.tourist-places
+{
+    display : flex;
+    flex-direction : row ;
+    justify-items : center;
+    align-items: center;
+    background-color: rgb(249, 202, 209);
+    border-radius: 20px;
+    margin:40px 20px;
+}
+.tour-img
+{
+   height: 300px;
+   width : 385px;
+   object-fit: cover;
+   border-color: rgb(168, 168, 168);
+   border-width: 1px;
+   border-radius: 10px;
+   margin : 15px 15px;
+   cursor : pointer;
+}
+.info
+{
+    font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; 
+    color : rgb(0, 0, 0);  
+    font-size: 15px;
+    align-items: start;
+}
+.heading-tour-info
+{
+    cursor : pointer;
+}
+.history
+{
+    display : flex;
+    flex-direction : row ;
+    justify-items : center;
+    align-items: center;
+    background-color: rgb(249, 202, 209);
+    border-radius: 20px;
+    margin:40px 20px;
+}
+.history-image
+{
+   height: 300px;
+   width : 385px;
+   object-fit: cover;
+   border-color: rgb(168, 168, 168);
+   object-fit: cover;
+   border-width: 1px;
+   border-radius: 10px;
+   margin : 15px 15px;
+   cursor : pointer;
+}
+.historic-info
+{
+    font-family: Arial, Helvetica, sans-serif; 
+    color : rgb(0, 0, 0);  
+    font-size: 15px;
+    align-items: start;
+}
+.heading-history
+{
+    cursor : pointer;
+}
+
+.hotels
+{
+    display : flex;
+    flex-direction : row ;
+    justify-items : center;
+    align-items: center;
+    background-color: rgb(249, 202, 209);
+    border-radius: 20px;
+    margin:40px 20px;
+}
+.hotels-image
+{
+   height: 300px;
+   width : 385px;
+   object-fit: cover;
+   border-color: rgb(168, 168, 168);
+   object-fit: cover;
+   border-width: 1px;
+   border-radius: 10px;
+   margin : 15px 15px;
+   cursor : pointer;
+}
+.hotels-info
+{
+    font-family: Arial, Helvetica, sans-serif; 
+    color : rgb(0, 0, 0);  
+    font-size: 15px;
+    align-items: start;
+}
+.heading-hotels
+{
+    cursor : pointer;
+    font-size: 32px;
+}
+.travel
+{
+    display : flex;
+    flex-direction : row ;
+    justify-items : center;
+    align-items: center;
+    background-color: rgb(249, 202, 209);
+    border-radius: 20px;
+    margin:40px 20px;
+}
+.travel-image
+{
+   height: 300px;
+   width : 385px;
+   object-fit: cover;
+   border-color: rgb(168, 168, 168);
+   object-fit: cover;
+   border-width: 1px;
+   border-radius: 10px;
+   margin : 15px 15px;
+   cursor : pointer;
+}
+.travel-info
+{
+    font-family: Arial, Helvetica, sans-serif; 
+    color : rgb(0, 0, 0);  
+    font-size: 15px;
+    align-items: start;
+}
+.travel-hotels
+{
+    cursor : pointer;
+}
+.heading-travel
+{
+    cursor : pointer;
+    font-size: 32p20
+}
+.end-image
+{
+    width : 100%;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+old html code / correct code
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>smart city Jaipur</title>
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    <body class="mainbody">
+        <div class="header">
+            <div class="travel-planning">
+                <img class="travel-planner" src="travel-planner2.webp" title="plan your travel" >
+            </div>
+            <div class="main-logo">
+                <img class="logo" src="4058a518-91a3-40ad-80b3-64e07f27ae7b.webp" > 
+            </div>
+            <div class="none"></div>
+        </div>
+        <div class="tourist-places">
+            <div class="places-image">
+                <img class="tour-img" src="sightseeing-rajsthan.webp"> 
+            </div>
+            <div class="places-info">
+                <h1 class="heading-tour-info">Tourist places</h1>
+                <p class="info">
+                    Jaipur, the vibrant capital of Rajasthan in India, is a treasure trove of history, culture, and architectural marvels. Known as the "Pink City" due to its pink-hued buildings, it offers a mesmerizing blend of ancient forts like Amer and Nahargarh, opulent palaces such as the City Palace and Hawa Mahal, and serene gardens like the Vidyadhar Garden. Visitors can explore the bustling markets of Johari Bazaar and Bapu Bazaar for handicrafts and jewelry. With its rich heritage, delectable cuisine, and warm hospitality, Jaipur is a captivating destination that immerses travelers in India's royal past.
+                </p>
+            </div> 
+        </div>
+        <div class="history">
+            <div class="history-img">
+                <img class="history-image" src = "history-img.jpeg">
+            </div>
+            <div class = "history-info">
+                <h1 class = "heading-history" >Historic refrences</h1>
+                <p class="historic-info">
+                    Rajasthan, a land of rich historical references, showcases the enduring legacies of both Rajputs and Jats. The Rajputs, renowned for their chivalry and valor, ruled several princely states, leaving behind magnificent forts and palaces like the Amber Fort and Mehrangarh Fort. Meanwhile, the Jats, known for their agrarian prowess, played a vital role in shaping the region's landscape, building stepwells (baolis) and contributing to the vibrant rural culture. Rajasthan's history is a tapestry woven with the tales of these two communities, reflecting their distinct contributions to the state's heritage and identity.
+                </p>
+            </div>
+        </div>
+        <div class="hotels">
+            <div class="hotels-img">
+                <img class="hotels-image" src = "hotel-img.jpeg">
+            </div>
+            <div class = "hotels-info">
+                <h1 class = "heading-hotels" >Best hotels</h1>
+                <p class="hotels-info">
+                    Jaipur boasts some of India's most opulent hotels, offering unparalleled luxury and hospitality. The Rambagh Palace, a former royal residence, exudes regal charm with its lavish decor and lush gardens. The Taj Jai Mahal Palace combines modern comforts with historic elegance, while the Oberoi Rajvilas provides a tranquil retreat in a lush oasis. These luxurious accommodations feature world-class amenities, exquisite dining, and a royal ambiance, ensuring an unforgettable stay for discerning travelers in the Pink City.
+                </p>
+            </div>
+        </div>
+        <div class="travel">
+            <div class="travel-img">
+                <img class="travel-image" src = "travel-img.jpeg">
+            </div>
+            <div class = "travel-info">
+                <h1 class = "heading-travel" >Modes of travel</h1>
+                <p class="travel-info">
+                    While Jaipur's luxurious hotels are scattered throughout the city, some are strategically located near major metro and bus routes. The Rambagh Palace and Taj Jai Mahal Palace, both situated in close proximity to metro stations, offer regal opulence and ease of travel. The Oberoi Rajvilas, though slightly away from metro routes, provides a serene retreat with convenient access to key bus routes. These hotels not only pamper guests with luxury but also ensure seamless connectivity for exploring.
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
+grid css
+.main
+{
+    display: grid;
+    grid-template-rows:max-content;
+    row-gap: 50px;
+}
+.c1
+{
+    display: grid;
+    grid-template-columns:none;
+    column-gap: 25px;
+}
+.c2
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 25px;
+}
+.c3
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 25px;
+}
+.a1
+{
+    background-color:red;
+}
+.a2
+{
+    background-color: black;
+}
+.b1
+{
+    background-color: yellow;
+}
+.b2
+{
+    background-color: green;
+}
+.d1
+{
+    background-color:blue;
+}
+.d2
+{
+    background-color: purple;
+    margin-right: 25px;
+}

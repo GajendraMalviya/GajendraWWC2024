@@ -1,0 +1,317 @@
+.main-body
+{
+    background-color: rgb(252, 231, 238);
+    padding-top:100px;
+}
+.header
+{
+    display : flex;
+    flex : 1 1 1;
+    justify-items : center;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgb(231, 120, 139);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.travel-planning
+{
+    flex : 1;
+    position: relative;
+    display: inline-block;
+}
+/* adding tool tip to image */
+.travel-planner::before {
+    content: attr(title);
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.05s ease-in-out;
+  }
+  
+  .travel-planner:hover::before {
+    opacity: 1;
+  }
+.none
+{
+    flex : 1;
+}
+.main-logo
+{
+    flex : 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.travel-planner
+{
+    flex : 1;
+    margin-left: 50px;
+    height: 70px;
+    border-radius: 35px;
+    cursor : pointer ;
+    background-color: rgb(199, 198, 198);
+}
+.logo
+{
+    cursor : pointer;
+    height : 125px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.places-body
+{
+    display: grid;
+    grid-template-rows: max-content;
+    row-gap: 0px;
+}
+.first-two
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+}
+.birla-mandir
+{
+    display : flex;
+    flex-direction : column ;
+    justify-items : center;
+    align-items: center;
+    background-color: rgb(249, 202, 209);
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+.birla-mandir-img
+{
+   object-fit: cover;
+   border-color: rgb(168, 168, 168);
+   border-width: 1px;
+   border-radius: 10px;
+   margin : 15px 15px;
+   cursor : pointer;
+   width: 650px;
+   height: 370px;
+}
+.birla-mandir-info
+{
+    font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; 
+    color : rgb(0, 0, 0);  
+    font-size: 15px;
+    align-items: start;
+    text-align: center;
+    margin-top: 0px;
+}
+.birla-mandir-heading
+{
+    cursor : pointer;
+    text-align: center;
+    margin-top: 0px;
+}
+.akshardham-temple
+{
+    display : flex;
+    flex-direction : column ;
+    justify-items : center;
+    align-items: center;
+    background-color: rgb(249, 202, 209);
+    border-radius: 20px;
+    margin-top:40px;
+    margin-right: 10px;
+}
+.akshardham-temple-img
+{
+   object-fit: cover;
+   border-color: rgb(168, 168, 168);
+   border-width: 1px;
+   border-radius: 10px;
+   margin : 15px 15px;
+   cursor : pointer;
+   width : 650px;
+   height: 370px;
+}
+.akshardham-temple-info
+{
+    font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; 
+    color : rgb(0, 0, 0);  
+    font-size: 15px;
+    align-items: start;
+    text-align: center;
+    margin-top: 0px;
+}
+.akshardham-temple-heading
+{
+    cursor : pointer;
+    text-align: center;
+    margin-top: 0px;
+}
+.second-two
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+}
+.govind-dev-ji
+{
+    display : flex;
+    flex-direction : column ;
+    justify-items : center;
+    align-items: center;
+    background-color: rgb(249, 202, 209);
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+.govind-dev-ji-img
+{
+   object-fit: cover;
+   border-color: rgb(168, 168, 168);
+   border-width: 1px;
+   border-radius: 10px;
+   margin : 15px 15px;
+   cursor : pointer;
+   width: 650px;
+   height: 370px;
+}
+.govind-dev-ji-info
+{
+    font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; 
+    color : rgb(0, 0, 0);  
+    font-size: 15px;
+    align-items: start;
+    text-align: center;
+    margin-top: 0px;
+}
+.govind-dev-ji-heading
+{
+    cursor : pointer;
+    text-align: center;
+    margin-top: 0px;
+}
+.khole-hanuman
+{
+    display : flex;
+    flex-direction : column ;
+    justify-items : center;
+    align-items: center;
+    background-color: rgb(249, 202, 209);
+    border-radius: 20px;
+    margin-top:40px;
+    margin-right: 10px;
+}
+.khole-hanuman-img
+{
+   object-fit: cover;
+   border-color: rgb(168, 168, 168);
+   border-width: 1px;
+   border-radius: 10px;
+   margin : 15px 15px;
+   cursor : pointer;
+   width : 650px;
+   height : 370px;
+}
+.khole-hanuman-info
+{
+    font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; 
+    color : rgb(0, 0, 0);  
+    font-size: 15px;
+    align-items: start;
+    text-align: center;
+    margin-top: 0px;
+}
+.khole-hanuman-heading
+{
+    cursor : pointer;
+    text-align: center;
+    margin-top: 0px;
+}
+.third-two
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+}
+.galta-ji-temple
+{
+    display : flex;
+    flex-direction : column ;
+    justify-items : center;
+    align-items: center;
+    background-color: rgb(249, 202, 209);
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+.galta-ji-temple-img
+{
+   object-fit: cover;
+   border-color: rgb(168, 168, 168);
+   border-width: 1px;
+   border-radius: 10px;
+   margin : 15px 15px;
+   cursor : pointer;
+   width: 650px;
+   height: 370px;
+}
+.galta-ji-temple-info
+{
+    font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; 
+    color : rgb(0, 0, 0);  
+    font-size: 15px;
+    align-items: start;
+    text-align: center;
+    margin-top: 0px;
+}
+.galta-ji-temple-heading
+{
+    cursor : pointer;
+    text-align: center;
+    margin-top: 0px;
+}
+.moti-dungri
+{
+    display : flex;
+    flex-direction : column ;
+    justify-items : center;
+    align-items: center;
+    background-color: rgb(249, 202, 209);
+    border-radius: 20px;
+    margin-top:40px;
+    margin-right: 10px;
+}
+.moti-dungri-img
+{
+   object-fit: cover;
+   border-color: rgb(168, 168, 168);
+   border-width: 1px;
+   border-radius: 10px;
+   margin : 15px 15px;
+   cursor : pointer;
+   width : 650px;
+   height : 370px;
+}
+.moti-dungri-info
+{
+    font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; 
+    color : rgb(0, 0, 0);  
+    font-size: 15px;
+    align-items: start;
+    text-align: center;
+    margin-top: 0px;
+}
+.moti-dungri-heading
+{
+    cursor : pointer;
+    text-align: center;
+    margin-top: 0px;
+}

@@ -1,0 +1,234 @@
+.mainbody
+{
+    background-color: rgb(252, 231, 238);
+    padding-top: 100px;
+}
+.header
+{
+    display : flex;
+    flex : 1 1 1;
+    justify-items : center;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgb(231, 120, 139);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.travel-planning
+{
+    flex : 1;
+    position: relative;
+    display: inline-block;
+}
+/* adding tool tip to image */
+.travel-planner::before {
+    content: attr(title);
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.05s ease-in-out;
+  }
+  
+  .travel-planner:hover::before {
+    opacity: 1;
+  }
+.none
+{
+    flex : 1;
+}
+.main-logo
+{
+    flex : 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.travel-planner
+{
+    flex : 1;
+    margin-left: 50px;
+    height: 70px;
+    border-radius: 35px;
+    cursor : pointer ;
+    background-color: rgb(199, 198, 198);
+}
+.logo
+{
+    cursor : pointer;
+    height : 125px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.tourist-places
+{
+    display : flex;
+    flex-direction : row ;
+    justify-items : center;
+    align-items: center;
+    background-color: rgb(249, 202, 209);
+    border-radius: 20px;
+    margin:40px 20px;
+}
+.tour-img
+{
+   height: 300px;
+   width : 385px;
+   object-fit: cover;
+   border-color: rgb(168, 168, 168);
+   border-width: 1px;
+   border-radius: 10px;
+   margin : 15px 15px;
+   cursor : pointer;
+}
+.info
+{
+    font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; 
+    color : rgb(0, 0, 0);  
+    font-size: 15px;
+    align-items: start;
+}
+.link-tourist-places
+{
+    text-decoration: none;
+    color: inherit;
+}
+.heading-tour-info
+{
+    cursor : pointer;
+}
+.history
+{
+    display : flex;
+    flex-direction : row ;
+    justify-items : center;
+    align-items: center;
+    background-color: rgb(249, 202, 209);
+    border-radius: 20px;
+    margin:40px 20px;
+}
+.history-image
+{
+   height: 300px;
+   width : 385px;
+   object-fit: cover;
+   border-color: rgb(168, 168, 168);
+   object-fit: cover;
+   border-width: 1px;
+   border-radius: 10px;
+   margin : 15px 15px;
+   cursor : pointer;
+}
+.historic-info
+{
+    font-family: Arial, Helvetica, sans-serif; 
+    color : rgb(0, 0, 0);  
+    font-size: 15px;
+    align-items: start;
+}
+.heading-history
+{
+    cursor : pointer;
+}
+.historic-refrences-link
+{
+    text-decoration: none;
+    color: inherit;
+}
+.hotels
+{
+    display : flex;
+    flex-direction : row ;
+    justify-items : center;
+    align-items: center;
+    background-color: rgb(249, 202, 209);
+    border-radius: 20px;
+    margin:40px 20px;
+}
+.hotels-image
+{
+   height: 300px;
+   width : 385px;
+   object-fit: cover;
+   border-color: rgb(168, 168, 168);
+   object-fit: cover;
+   border-width: 1px;
+   border-radius: 10px;
+   margin : 15px 15px;
+   cursor : pointer;
+}
+.hotels-info
+{
+    font-family: Arial, Helvetica, sans-serif; 
+    color : rgb(0, 0, 0);  
+    font-size: 15px;
+    align-items: start;
+}
+.heading-hotels
+{
+    cursor : pointer;
+    font-size: 32px;
+}
+.hotels-link
+{
+    text-decoration: none;
+    color: inherit;
+}
+.travel
+{
+    display : flex;
+    flex-direction : row ;
+    justify-items : center;
+    align-items: center;
+    background-color: rgb(249, 202, 209);
+    border-radius: 20px;
+    margin:40px 20px;
+}
+.travel-image
+{
+   height: 300px;
+   width : 385px;
+   object-fit: cover;
+   border-color: rgb(168, 168, 168);
+   object-fit: cover;
+   border-width: 1px;
+   border-radius: 10px;
+   margin : 15px 15px;
+   cursor : pointer;
+}
+.travel-info
+{
+    font-family: Arial, Helvetica, sans-serif; 
+    color : rgb(0, 0, 0);  
+    font-size: 15px;
+    align-items: start;
+}
+.travel-hotels
+{
+    cursor : pointer;
+}
+.heading-travel
+{
+    cursor : pointer;
+    font-size: 32p20
+}
+.end-image
+{
+    width : 100%;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+.travel-link
+{
+    text-decoration: none;
+    color: inherit;
+}

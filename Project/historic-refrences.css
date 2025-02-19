@@ -1,0 +1,92 @@
+.mainbody
+{
+    background-color: rgb(252, 231, 238);
+    padding-top: 100px;
+}
+.header
+{
+    display : flex;
+    flex : 1 1 1;
+    justify-items : center;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgb(231, 120, 139);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.travel-planning
+{
+    flex : 1;
+    position: relative;
+    display: inline-block;
+}
+/* adding tool tip to image */
+.travel-planner::before {
+    content: attr(title);
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.05s ease-in-out;
+  }
+  
+  .travel-planner:hover::before {
+    opacity: 1;
+  }
+.none
+{
+    flex : 1;
+}
+.main-logo
+{
+    flex : 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.travel-planner
+{
+    flex : 1;
+    margin-left: 50px;
+    height: 70px;
+    border-radius: 35px;
+    cursor : pointer ;
+    background-color: rgb(199, 198, 198);
+}
+.logo
+{
+    cursor : pointer;
+    height : 125px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.info-container
+{
+    display : flex;
+    flex-direction : row ;
+    justify-items : center;
+    align-items: center;
+    background-color: rgb(249, 202, 209);
+    border-radius: 20px;
+    margin:40px 40px;
+}
+p{
+    font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; 
+    color : rgb(0, 0, 0);  
+    font-size: 17px;
+    align-items: start;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+h1{
+    text-align: center;
+}

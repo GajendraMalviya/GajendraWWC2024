@@ -1,0 +1,477 @@
+.main-body
+{
+    background-color: rgb(252, 231, 238);
+    padding-top:100px;
+}
+.header
+{
+    display : flex;
+    flex : 1 1 1;
+    justify-items : center;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgb(231, 120, 139);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.travel-planning
+{
+    flex : 1;
+    position: relative;
+    display: inline-block;
+}
+/* adding tool tip to image */
+.travel-planner::before {
+    content: attr(title);
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.05s ease-in-out;
+  }
+  
+  .travel-planner:hover::before {
+    opacity: 1;
+  }
+.none
+{
+    flex : 1;
+}
+.main-logo
+{
+    flex : 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.travel-planner
+{
+    flex : 1;
+    margin-left: 50px;
+    height: 70px;
+    border-radius: 35px;
+    cursor : pointer ;
+    background-color: rgb(199, 198, 198);
+}
+.logo
+{
+    cursor : pointer;
+    height : 125px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.places-body
+{
+    display: grid;
+    grid-template-rows: max-content;
+    row-gap: 0px;
+}
+.first-two
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+}
+.hawa-mahal
+{
+    display : flex;
+    flex-direction : column ;
+    justify-items : center;
+    align-items: center;
+    background-color: rgb(249, 202, 209);
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+.hawa-mahal-img
+{
+   object-fit: cover;
+   border-color: rgb(168, 168, 168);
+   border-width: 1px;
+   border-radius: 10px;
+   margin : 15px 15px;
+   cursor : pointer;
+   width: 650px;
+   height: 370px;
+}
+.hawa-mahal-info
+{
+    font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; 
+    color : rgb(0, 0, 0);  
+    font-size: 15px;
+    align-items: start;
+    text-align: center;
+    margin-top: 0px;
+}
+.hawa-mahal-heading
+{
+    cursor : pointer;
+    text-align: center;
+    margin-top: 0px;
+}
+.amber-fort
+{
+    display : flex;
+    flex-direction : column ;
+    justify-items : center;
+    align-items: center;
+    background-color: rgb(249, 202, 209);
+    border-radius: 20px;
+    margin-top:40px;
+    margin-right: 10px;
+}
+.amber-fort-img
+{
+   object-fit: cover;
+   border-color: rgb(168, 168, 168);
+   border-width: 1px;
+   border-radius: 10px;
+   margin : 15px 15px;
+   cursor : pointer;
+   width : 650px;
+   height: 370px;
+}
+.amber-fort-info
+{
+    font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; 
+    color : rgb(0, 0, 0);  
+    font-size: 15px;
+    align-items: start;
+    text-align: center;
+    margin-top: 0px;
+}
+.amber-fort-heading
+{
+    cursor : pointer;
+    text-align: center;
+    margin-top: 0px;
+}
+.second-two
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+}
+.jal-mahal
+{
+    display : flex;
+    flex-direction : column ;
+    justify-items : center;
+    align-items: center;
+    background-color: rgb(249, 202, 209);
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+.jal-mahal-img
+{
+   object-fit: cover;
+   border-color: rgb(168, 168, 168);
+   border-width: 1px;
+   border-radius: 10px;
+   margin : 15px 15px;
+   cursor : pointer;
+   width: 650px;
+   height: 370px;
+}
+.jal-mahal-info
+{
+    font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; 
+    color : rgb(0, 0, 0);  
+    font-size: 15px;
+    align-items: start;
+    text-align: center;
+    margin-top: 0px;
+}
+.jal-mahal-heading
+{
+    cursor : pointer;
+    text-align: center;
+    margin-top: 0px;
+}
+.nahargarh-fort
+{
+    display : flex;
+    flex-direction : column ;
+    justify-items : center;
+    align-items: center;
+    background-color: rgb(249, 202, 209);
+    border-radius: 20px;
+    margin-top:40px;
+    margin-right: 10px;
+}
+.nahargarh-fort-img
+{
+   object-fit: cover;
+   border-color: rgb(168, 168, 168);
+   border-width: 1px;
+   border-radius: 10px;
+   margin : 15px 15px;
+   cursor : pointer;
+   width : 650px;
+   height : 370px;
+}
+.nahargarh-fort-info
+{
+    font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; 
+    color : rgb(0, 0, 0);  
+    font-size: 15px;
+    align-items: start;
+    text-align: center;
+    margin-top: 0px;
+}
+.nahargarh-fort-heading
+{
+    cursor : pointer;
+    text-align: center;
+    margin-top: 0px;
+}
+.third-two
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+}
+.jaigarh-fort
+{
+    display : flex;
+    flex-direction : column ;
+    justify-items : center;
+    align-items: center;
+    background-color: rgb(249, 202, 209);
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+.jaigarh-fort-img
+{
+   object-fit: cover;
+   border-color: rgb(168, 168, 168);
+   border-width: 1px;
+   border-radius: 10px;
+   margin : 15px 15px;
+   cursor : pointer;
+   width: 650px;
+   height: 370px;
+}
+.jaigarh-fort-info
+{
+    font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; 
+    color : rgb(0, 0, 0);  
+    font-size: 15px;
+    align-items: start;
+    text-align: center;
+    margin-top: 0px;
+}
+.jaigarh-fort-heading
+{
+    cursor : pointer;
+    text-align: center;
+    margin-top: 0px;
+}
+.city-palace
+{
+    display : flex;
+    flex-direction : column ;
+    justify-items : center;
+    align-items: center;
+    background-color: rgb(249, 202, 209);
+    border-radius: 20px;
+    margin-top:40px;
+    margin-right: 10px;
+}
+.city-palace-img
+{
+   object-fit: cover;
+   border-color: rgb(168, 168, 168);
+   border-width: 1px;
+   border-radius: 10px;
+   margin : 15px 15px;
+   cursor : pointer;
+   width : 650px;
+   height : 370px;
+}
+.city-palace-info
+{
+    font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; 
+    color : rgb(0, 0, 0);  
+    font-size: 15px;
+    align-items: start;
+    text-align: center;
+    margin-top: 0px;
+}
+.city-palace-heading
+{
+    cursor : pointer;
+    text-align: center;
+    margin-top: 0px;
+}
+.fourth-two
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+}
+.jantar-mantar
+{
+    display : flex;
+    flex-direction : column ;
+    justify-items : center;
+    align-items: center;
+    background-color: rgb(249, 202, 209);
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+.jantar-mantar-img
+{
+   object-fit: cover;
+   border-color: rgb(168, 168, 168);
+   border-width: 1px;
+   border-radius: 10px;
+   margin : 15px 15px;
+   cursor : pointer;
+   width: 650px;
+   height: 370px;
+}
+.jantar-mantar-info
+{
+    font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; 
+    color : rgb(0, 0, 0);  
+    font-size: 15px;
+    align-items: start;
+    text-align: center;
+    margin-top: 0px;
+}
+.jantar-mantar-heading
+{
+    cursor : pointer;
+    text-align: center;
+    margin-top: 0px;
+}
+.sisodia-bagh
+{
+    display : flex;
+    flex-direction : column ;
+    justify-items : center;
+    align-items: center;
+    background-color: rgb(249, 202, 209);
+    border-radius: 20px;
+    margin-top:40px;
+    margin-right: 10px;
+}
+.sisodia-bagh-img
+{
+   object-fit: cover;
+   border-color: rgb(168, 168, 168);
+   border-width: 1px;
+   border-radius: 10px;
+   margin : 15px 15px;
+   cursor : pointer;
+   width : 650px;
+   height : 370px;
+}
+.sisodia-bagh-info
+{
+    font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; 
+    color : rgb(0, 0, 0);  
+    font-size: 15px;
+    align-items: start;
+    text-align: center;
+    margin-top: 0px;
+}
+.sisodia-bagh-heading
+{
+    cursor : pointer;
+    text-align: center;
+    margin-top: 0px;
+}
+.fifth-two
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+}
+.chand-baori
+{
+    display : flex;
+    flex-direction : column ;
+    justify-items : center;
+    align-items: center;
+    background-color: rgb(249, 202, 209);
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+.chand-baori-img
+{
+   object-fit: cover;
+   border-color: rgb(168, 168, 168);
+   border-width: 1px;
+   border-radius: 10px;
+   margin : 15px 15px;
+   cursor : pointer;
+   width: 650px;
+   height: 370px;
+}
+.chand-baori-info
+{
+    font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; 
+    color : rgb(0, 0, 0);  
+    font-size: 15px;
+    align-items: start;
+    text-align: center;
+    margin-top: 0px;
+}
+.chand-baori-heading
+{
+    cursor : pointer;
+    text-align: center;
+    margin-top: 0px;
+}
+.panna-kund
+{
+    display : flex;
+    flex-direction : column ;
+    justify-items : center;
+    align-items: center;
+    background-color: rgb(249, 202, 209);
+    border-radius: 20px;
+    margin-top:40px;
+    margin-right: 10px;
+}
+.panna-kund-img
+{
+   object-fit: cover;
+   border-color: rgb(168, 168, 168);
+   border-width: 1px;
+   border-radius: 10px;
+   margin : 15px 15px;
+   cursor : pointer;
+   width : 650px;
+   height : 370px;
+}
+.panna-kund-info
+{
+    font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; 
+    color : rgb(0, 0, 0);  
+    font-size: 15px;
+    align-items: start;
+    text-align: center;
+    margin-top: 0px;
+}
+.panna-kund-heading
+{
+    cursor : pointer;
+    text-align: center;
+    margin-top: 0px;
+}
